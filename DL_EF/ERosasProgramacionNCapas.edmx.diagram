@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3932f795b6194e2fa75f65cffebe1201" Name="Diagram1">
+        <EntityTypeShape EntityType="ERosasProgramacionNCapasModel.Rol" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERosasProgramacionNCapasModel.Usuario" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="ERosasProgramacionNCapasModel.FK__Usuario__IdRol__35BCFE0A" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ERosasProgramacionNCapasModel.Area" Width="1.5" PointX="5.375" PointY="1.5" />
+        <EntityTypeShape EntityType="ERosasProgramacionNCapasModel.Departamento" Width="1.5" PointX="7.625" PointY="1.375" />
+        <EntityTypeShape EntityType="ERosasProgramacionNCapasModel.Producto" Width="1.5" PointX="9.875" PointY="1" />
+        <EntityTypeShape EntityType="ERosasProgramacionNCapasModel.Proveedor" Width="1.5" PointX="7.625" PointY="5.5" />
+        <AssociationConnector Association="ERosasProgramacionNCapasModel.FK__Departame__IdAre__5EBF139D" />
+        <AssociationConnector Association="ERosasProgramacionNCapasModel.FK__Producto__IdDepa__628FA481" />
+        <AssociationConnector Association="ERosasProgramacionNCapasModel.FK__Producto__IdProv__619B8048" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

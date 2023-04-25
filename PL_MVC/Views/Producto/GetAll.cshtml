@@ -1,0 +1,94 @@
+﻿
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="~/Scripts/ProductoCRUD/Producto.js"></script>
+
+
+@{
+    ViewBag.Title = "GetAll";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h1 style="border: #00a6ff; text-align: center;">Producto</h1>
+
+<div>
+    <button type="button" class="btn btn-primary btn-lg" onclick="showForm()">Agregar</button>
+</div>
+
+<table class="table" id="producto">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Actualizar</th>
+            <th scope="col">IdProducto</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Precio Unitario</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Proveedor</th>
+            <th scope="col">Departamento</th>
+            <th scope="col">Eliminar</th>
+        </tr>
+    </thead>
+    <tbody>
+       
+    </tbody>
+</table>
+
+<div class="modal fade" id="ModalUpdate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title" id="myModalLabel">Actualizar Producto</h4>
+            </div>
+
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="txtIdProducto" placeholder="IdProducto" disabled="disabled" />
+                    </div>
+                    <label id="lblIdProducto"></label>
+                    <div class="form-group">
+                        <input  name="letras" type="text" maxlength="50" class="form-control" id="txtNombre" onkeypress="return SoloLetras(event,lblNombre)" placeholder="Nombre" required />
+                    </div>
+                    <label id="lblNombre"></label>
+                    <div class="form-group">
+                        <input  type="text" min="1" max="100000" class="form-control" id="txtPrecioUnitario" onkeypress="return SoloNumeroDecimal(event,lblPrecioUnitario)" placeholder="Precio Unitario"  required/>
+                    </div>
+                    <label id="lblPrecioUnitario"></label>
+                    <div class="form-group">
+                        <input  type="text" min="1" max="100000" class="form-control" id="txtStock" onkeypress="return SoloNumeros(event,lblStock)" placeholder="Stock" required/>
+                    </div>
+                    <label id="lblStock"></label>
+                    <div class="form-group">
+                        <input  name="letras" type="text" maxlength="100" class="form-control" id="txtDescripcion" onkeypress="return SoloLetras(event,lblDescripcion)" placeholder="Descripcion" required/>
+                    </div>
+                    <label id="lblDescripcion"></label> 
+                    <div class="form-group">
+                        <input  type="text" minlength="1" maxlength="1" class="form-control" id="txtProveedor" onkeypress="return SoloNumeros(event,lblProveedor)" placeholder="Proveedor" required/>
+                    </div>
+                    <label id="lblProveedor"></label>
+                    <div class="form-group">
+                        <input  type="text" minlength="1" maxlength="1" class="form-control" id="txtDepartamento" onkeypress="return SoloNumeros(event,lblDepartamento)" placeholder="Departamento" required/>
+                    </div>
+                    <label id="lblDepartamento"></label>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-outline-success" class="btn glyphicon glyphicon-pencil" id="btnUpdate" onclick="Update()">Actualizar</button>
+                <button type="submit" class="btn btn-outline-success" class="btn glyphicon glyphicon-pencil" id="btnAdd"  onclick="Add()">Agregar</button>
+                <button type="submit" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
